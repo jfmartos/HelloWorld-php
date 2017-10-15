@@ -1,77 +1,88 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="es" lang="es-es">
+<!doctype html>
+<!html lang="en">
+<html>
 <head>
-<title>Menus desplegable solo CSS ejemplo 1 - Recursos CSS - araudi.net</title>
-<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
-<meta name="Keywords" content="recursos, css, diseño web, xhtml, software libre" />
-<meta name="Description" content="Pagina dedicada a recursos de diseño web con CSS, en castellano" />
-<meta name="Author" content="Mikel Morote Donazar - Praxis Iru&ntilde;ea SLL" />
-<meta name="Subject" content="Recursos CSS" />
-<meta name="Language" content="espa&ntilde;ol" />
-<meta name="Robots" content="index, follow" />
-<link rel="alternate" href="http://www.araudi.net/indice.html" title="Indice de contenidos" media="all" lang="es" />
-<link rel="stylesheet" href="menu.css" type="text/css" />
-<!--[if IE]><style>#menu ul li ul li a{margin-bottom:-1px;border-top-color: #fff;} #menu ul.nivel2{margin-top: -1px;}</style><![endif]-->
-<!--[if IE 7]><style>#menu ul li ul li.nivel2:hover{margin-bottom:-2px;}</style><![endif]-->
+
+  <!meta charset="utf-8">
+  <!meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  <title>Dolphin-PHP on OpenShift...</title>
+
+  <!Inserta las Hojas de estilo en cascada...>
+  <link rel="stylesheet" href="bootstrap.css">  
+
 </head>
+
+
 <body>
-<div id="menu">
-<ul>
-  <li class="nivel1"><a href="#" class="nivel1">Opción 1</a>
-<!--[if lte IE 6]><a href="#" class="nivel1ie">Opción 1<table class="falsa"><tr><td><![endif]-->
-	<ul class="nivel2">
-		<li><a href="#">Opción 1.1</a></li>
-		<li><a href="http://www.idplus.org">idplus.org</a></li>
-	</ul>
-<!--[if lte IE 6]></td></tr></table></a><![endif]-->
-  </li>
-  <li class="nivel1"><a href="#" class="nivel1">Opción 2</a>
-<!--[if lte IE 6]><a href="#" class="nivel1ie">Opción 2<table class="falsa"><tr><td><![endif]-->
-	<ul class="nivel2">
-		<li><a href="#">Opción 2.1</a></li>
-		<li><a href="#">Opción 2.2</a></li>
-		<li class="nivel2"><a class="nivel2" href="#">Opción 2.3 »</a>
-			<!--[if lte IE 6]><a href="#" class="nivel2ie">Opción 2.3 »<table class="falsa"><tr><td><![endif]-->
-			<ul class="nivel3">
-				<li><a class="primera" href="#">Opción 2.3.1</a></li>
-				<li><a href="#">Opción 2.3.2</a></li>
-				<li><a href="http://www.idplus.org">idplus.org</a></li>
-			</ul>
-			<!--[if lte IE 6]></td></tr></table></a><![endif]--></li>
-		<li><a href="#">Opción 2.4</a></li>
-		<li><a href="http://www.idplus.org">idplus.org</a></li>
-	</ul>
-<!--[if lte IE 6]></td></tr></table></a><![endif]-->
-</li>
-  <li class="nivel1"><a href="#" class="nivel1">Opción 3</a>
-<!--[if lte IE 6]><a href="#" class="nivel1ie">Opción 3<table class="falsa"><tr><td><![endif]-->
-	<ul class="nivel2">
-		<li><a href="#">Opción 3.1</a></li>
-		<li><a href="#">Opción 3.2</a></li>
-		<li><a href="http://www.idplus.org">idplus.org</a></li>
-	</ul>
-<!--[if lte IE 6]></td></tr></table></a><![endif]-->
-</li>
-  <li class="nivel1"><a href="#" class="nivel1">Opción 4</a>
-<!--[if lte IE 6]><a href="#" class="nivel1ie">Opción 4<table class="falsa"><tr><td><![endif]-->
-	<ul class="nivel2">
-		<li><a href="#">Opción 4.1</a></li>
-		<li><a href="#">Opción 4.2</a></li>
-		<li><a href="#">Opción 4.3</a></li>
-		<li><a href="http://www.idplus.org">idplus.org</a></li>
-	</ul>
-<!--[if lte IE 6]></td></tr></table></a><![endif]-->
-</li>
-  <li class="nivel1"><a href="#" class="nivel1">Opción 5</a>
-<!--[if lte IE 6]><a href="#" class="nivel1ie">Opción 5<table class="falsa"><tr><td><![endif]-->
-	<ul class="nivel2">
-		<li><a href="#">Opción 5.1</a></li>
-		<li><a href="#">Opción 5.2</a></li>
-		<li><a href="http://www.idplus.org">idplus.org</a></li>
-	</ul>
-<!--[if lte IE 6]></td></tr></table></a><![endif]-->
-</li>
-</ul>
-</div>
+
+<CENTER>
+ 
+<?php
+/**
+ * Función para detectar el sistema operativo, navegador y versión del mismo
+ */
+
+$info=detect();
+ 
+echo "<br><br><br><br><font color='gray' SIZE=5><i>Sistema operativo: <b>".$info["os"] . "</b></i></font>";
+echo "<br><br><font color='gray' SIZE=4><i>Navegador: ".$info["browser"] . "</font>";
+echo "<br>Versión: ".$info["version"] . "</i>";
+
+echo "<br><br><br><font color='darkgray' SIZE=3><i>IP: " . $_SERVER['REMOTE_ADDR'] . "</i></font>";
+echo "<br><font color='darkgray' SIZE=3><i>Port: " . $_SERVER['SERVER_PORT'] . "</i></font>";
+
+echo "<br><br><font color='darkgray' SIZE=3><i>Host: " . $_SERVER['SERVER_NAME'] . "</i></font>";
+echo "<br><font color='darkgray' SIZE=3><i>Admin: " . $_SERVER['SERVER_ADMIN'] . "</i></font>";
+echo "<br><font color='darkgray' SIZE=3><i>Software: " . $_SERVER[SERVER_SOFTWARE] . "</i></font>";
+
+echo "<br><br><font color='darkgray' SIZE=3><i>Accept: " . $_SERVER['HTTP_ACCEPT'] . "</i></font>";
+echo "<br><font color='darkgray' SIZE=3><i>" . $_SERVER['HTTP_USER_AGENT'] . "</i></font>";
+
+
+ 
+/**
+ * Funcion que devuelve un array con los valores:
+ *	os => sistema operativo
+ *	browser => navegador
+ *	version => version del navegador
+ */
+function detect()
+{
+	$browser=array("IE","OPERA","MOZILLA","NETSCAPE","FIREFOX","SAFARI","CHROME");
+	$os=array("WIN","MAC","LINUX");
+ 
+	# definimos unos valores por defecto para el navegador y el sistema operativo
+	$info['browser'] = "OTHER";
+	$info['os'] = "OTHER";
+ 
+	# buscamos el navegador con su sistema operativo
+	foreach($browser as $parent)
+	{
+		$s = strpos(strtoupper($_SERVER['HTTP_USER_AGENT']), $parent);
+		$f = $s + strlen($parent);
+		$version = substr($_SERVER['HTTP_USER_AGENT'], $f, 15);
+		$version = preg_replace('/[^0-9,.]/','',$version);
+		if ($s)
+		{
+			$info['browser'] = $parent;
+			$info['version'] = $version;
+		}
+	}
+ 
+	# obtenemos el sistema operativo
+	foreach($os as $val)
+	{
+		if (strpos(strtoupper($_SERVER['HTTP_USER_AGENT']),$val)!==false)
+			$info['os'] = $val;
+	}
+ 
+	# devolvemos el array de valores
+	return $info;
+}
+?>
+
+</CENTER>                      
+
 </body>
 </html>
