@@ -6,7 +6,7 @@
   <!meta charset="utf-8">
   <!meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
-  <title>Dolphin-PHP on OpenShift...</title>
+  <title>Hello World - PHP...</title>
 
   <!Inserta las Hojas de estilo en cascada...>
   <link rel="stylesheet" href="bootstrap.css">  
@@ -20,14 +20,15 @@
  
 <?php
 /**
- * Función para detectar el sistema operativo, navegador y versión del mismo
+ * FunciÃ³n para detectar el sistema operativo, navegador y versiÃ³n del mismo
  */
 
 $info=detect();
- 
+	
+echo "<br><br><font color='black' SIZE=6><i>Hello World!!!</font>"; 
 echo "<br><br><br><br><font color='gray' SIZE=5><i>Sistema operativo: <b>".$info["os"] . "</b></i></font>";
 echo "<br><br><font color='gray' SIZE=4><i>Navegador: ".$info["browser"] . "</font>";
-echo "<br>Versión: ".$info["version"] . "</i>";
+echo "<br>VersiÃ³n: ".$info["version"] . "</i>";
 
 echo "<br><br><br><font color='darkgray' SIZE=3><i>IP: " . $_SERVER['REMOTE_ADDR'] . "</i></font>";
 echo "<br><font color='darkgray' SIZE=3><i>Port: " . $_SERVER['SERVER_PORT'] . "</i></font>";
