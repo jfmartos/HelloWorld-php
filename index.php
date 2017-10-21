@@ -25,9 +25,10 @@
 
 $info=detect();
  
+echo "<h2><font color='gray'>Hola Mundo !!!</font></h2>"; 
 echo "<br><br><br><br><font color='gray' SIZE=5><i>Sistema operativo: <b>".$info["os"] . "</b></i></font>";
 echo "<br><br><font color='gray' SIZE=4><i>Navegador: ".$info["browser"] . "</font>";
-echo "<br>Versión: ".$info["version"] . "</i>";
+echo "<br>Version: ".$info["version"] . "</i>";
 
 echo "<br><br><br><font color='darkgray' SIZE=3><i>IP: " . $_SERVER['REMOTE_ADDR'] . "</i></font>";
 echo "<br><font color='darkgray' SIZE=3><i>Port: " . $_SERVER['SERVER_PORT'] . "</i></font>";
