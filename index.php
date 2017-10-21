@@ -25,8 +25,8 @@
 
 $info=detect();
  
-echo "<h2><font color='gray'>Hola Mundo !!!</font></h2>"; 
-echo "<br><br><br><br><font color='gray' SIZE=5><i>Sistema operativo: <b>".$info["os"] . "</b></i></font>";
+echo "<br><br><br><br><font color='gray' SIZE=5><b>Hola Mundo !!!</font></b></font>"; 
+echo "<br><br><font color='gray' SIZE=5><i>Sistema operativo: <b>".$info["os"] . "</b></i></font>";
 echo "<br><br><font color='gray' SIZE=4><i>Navegador: ".$info["browser"] . "</font>";
 echo "<br>Version: ".$info["version"] . "</i>";
 
