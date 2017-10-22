@@ -20,12 +20,12 @@
  
 <?php
 /**
- * Función para detectar el sistema operativo, navegador y versión del mismo
+ * FunciÃ³n para detectar el sistema operativo, navegador y versiÃ³n del mismo
  */
 
 $info=detect();
  
-echo "<br><br><br><br><font color='gray' SIZE=5><b>Hola Mundo !!!</font></b></font>"; 
+echo "<br><br><font color='gray' SIZE=5><b>Hola Mundo !!!</font></b></font>"; 
 echo "<br><br><font color='gray' SIZE=5><i>Sistema operativo: <b>".$info["os"] . "</b></i></font>";
 echo "<br><br><font color='gray' SIZE=4><i>Navegador: ".$info["browser"] . "</font>";
 echo "<br>Version: ".$info["version"] . "</i>";
